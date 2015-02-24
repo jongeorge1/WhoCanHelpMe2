@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Who Can Help Me</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=9" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+</head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                    <h1>Who Can Help Me?</h1>
+                </div>
+                <div class="col-md-3">
+                    <p class="strapline">Helping to find people with the skills you need</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                    @RenderBody()
+                </div>
+                <div class="col-md-3">
+                    @Html.Partial("Shared/_Menu")
+                </div>
+            </div>
+        </div>
+    
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    </body>
+</html>

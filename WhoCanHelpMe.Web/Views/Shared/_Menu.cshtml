@@ -1,0 +1,12 @@
+﻿@using Nancy.Security
+<ul>
+    <li><a href="">Home</a></li>
+    <li><a href="/profile">You!</a></li>
+    
+    @if (Html.RenderContext.Context.CurrentUser != null)
+    {
+        <li><a href="/sign-out">Sign out</a></li>
+    }
+    
+    <li><a href="/about">About</a></li>
+</ul>
