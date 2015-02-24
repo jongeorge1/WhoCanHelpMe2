@@ -1,0 +1,1 @@
+start %~dp0RavenDB.Server.v3.0.3599\Raven.Server.exe --debug --browser
