@@ -126,6 +126,7 @@
     <Content Include="Views\Shared\_Menu.cshtml" />
     <Content Include="Views\About.cshtml" />
     <Content Include="Views\Login.cshtml" />
+    <Content Include="Views\Profile.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -146,9 +147,13 @@
     <Compile Include="Configuration\UserMapper.cs" />
     <Compile Include="Configuration\WchmUserIdentity.cs" />
     <Compile Include="Configuration\CryptographyConfigurationHelper.cs" />
+    <Compile Include="Extensions\ModuleExtensions.cs" />
+    <Compile Include="Modules\FormModels\ProfileFormModel.cs" />
     <Compile Include="Modules\OAuthCallback.cs" />
     <Compile Include="Modules\ProfileModule.cs" />
     <Compile Include="Modules\StaticPageModule.cs" />
+    <Compile Include="Modules\ViewModels\ProfileAssertionViewModel.cs" />
+    <Compile Include="Modules\ViewModels\ProfilePageViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

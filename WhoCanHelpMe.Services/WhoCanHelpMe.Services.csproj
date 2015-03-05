@@ -48,8 +48,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Commands\AddAssertionToProfileCommand.cs" />
     <Compile Include="Commands\AddOrUpdateUserOAuthProviderCommand.cs" />
     <Compile Include="Exceptions\UserNotFoundException.cs" />
+    <Compile Include="Handlers\AddAssertionToProfileHandler.cs" />
     <Compile Include="Handlers\AddOrUpdateUserOAuthProviderHandler.cs" />
     <Compile Include="Handlers\ICommandsMarker.cs" />
     <Compile Include="Commands\RegisterFreeUserFromOAuthProviderCommand.cs" />

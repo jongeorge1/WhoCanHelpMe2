@@ -1,5 +1,6 @@
 ﻿namespace WhoCanHelpMe.Web.Configuration
 {
+    using System;
     using System.Collections.Generic;
 
     using Nancy.Security;
@@ -10,9 +11,12 @@
     {
         public WchmUserIdentity(User user)
         {
+            this.Id = user.Id;
             this.UserName = user.EmailAddress;
             this.Claims = new string[0];
         }
+
+        public Guid Id { get; private set; }
 
         public string UserName { get; private set; }
 

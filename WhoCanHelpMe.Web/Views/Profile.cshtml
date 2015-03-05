@@ -1,0 +1,42 @@
+﻿@inherits NancyRazorViewBase<ProfilePageViewModel>
+@{
+    Layout = "Shared/_Layout.cshtml";
+}
+
+<h2>Show off your Guns</h2>
+<h3>@Model.Name</h3>
+
+<form action="/profile/add" method="post" class="form-inline">
+    <div class="form-group">
+        <label class="sr-only" for="category">Category</label>
+        <select id="category" name="category" class="form-control">
+            @foreach (var current in Model.Categories)
+            {
+                <option @(Model.FormModel.Category == @current.Key ? "selected" : string.Empty) value="@current.Key">@current.Key (@current.Value)</option>
+            }
+        </select>
+    </div>
+    
+    <div class="form-group">
+        <label class="sr-only" for="tag">Tag</label>
+        <input type="text" name="tag" id="tag" class="form-control" placeholder="Enter the new tag - e.g. C#, Ruby, nodejs" value="@Model.FormModel.Tag"/>
+    </div>
+    
+    <button type="submit" class="btn btn-default">Add</button>
+</form>
+
+@foreach (var assertion in Model.Assertions)
+{
+    <div class="row">
+        <div class="col-xs-12 assertion">
+            <span class="assertion-category">@assertion.Category</span>
+            <span class="assertion-tag">@assertion.Tag</span>
+            
+            <form class="form-inline">
+                <input type="hidden" name="id" value="@assertion.Id"/>
+                <button class="btn btn-default" type="submit">Delete</button>
+            </form>
+        </div>
+
+    </div>
+}
